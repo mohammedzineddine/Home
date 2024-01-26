@@ -99,7 +99,7 @@ html,body{
   background: #333;
 }
 .wrapper .button:nth-child(5):hover .icon{
-  background: #ff0000;
+  background: #9500ff;
 }
 .wrapper .button .icon i{
   font-size: 25px;
