@@ -1,10 +1,11 @@
 <?php
 // Connect to MySQL
-$conn = mysqli_connect("localhost", "root", "", "visitor_counter");
+$conn = mysqli_connect("localhost", "root","0790880944Mm", "visitor_counter");
 
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
+    echo "Connection failed";
 }
 
 // Increment the visit count
