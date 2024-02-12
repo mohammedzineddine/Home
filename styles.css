@@ -4,6 +4,17 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
+#counter {
+  font-size: 24px;
+  font-weight: bold;
+}
+#counter i {
+  margin-right: 5px;
+}
+.p{
+  background:scroll;
+  background-color: darkslategray;
+}
 
 header {
     color: #000000;
