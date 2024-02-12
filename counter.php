@@ -1,6 +1,6 @@
 <?php
 // Connect to MySQL
-$conn = mysqli_connect("localhost", "root", "", "views");
+$conn = mysqli_connect("localhost", "root", "", "visitor_counter");
 
 // Check connection
 if (!$conn) {
