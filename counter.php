@@ -1,6 +1,6 @@
 <?php
 // Connect to MySQL
-$conn = mysqli_connect("localhost", "username", "password", "views");
+$conn = mysqli_connect("localhost", "root", "", "views");
 
 // Check connection
 if (!$conn) {
@@ -8,10 +8,10 @@ if (!$conn) {
 }
 
 // Increment the visit count
-mysqli_query($conn, "UPDATE visit_count SET count = count + 1");
+mysqli_query($conn, "UPDATE counter SET count = count + 1");
 
 // Retrieve the updated count
-$result = mysqli_query($conn, "SELECT count FROM visit_count");
+$result = mysqli_query($conn, "SELECT count FROM counter");
 $row = mysqli_fetch_assoc($result);
 $count = $row['count'];
 
