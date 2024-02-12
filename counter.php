@@ -1,6 +1,6 @@
 <?php
 // Connect to MySQL
-$conn = mysqli_connect("localhost", "username", "password", "database");
+$conn = mysqli_connect("localhost", "username", "password", "views");
 
 // Check connection
 if (!$conn) {
