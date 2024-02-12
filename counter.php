@@ -1,15 +1,22 @@
 <?php
-// File to store the visit count
-$counterFile = 'counter.txt';
+// Connect to MySQL
+$conn = mysqli_connect("localhost", "username", "password", "database");
 
-// Read the current count
-$count = file_get_contents($counterFile);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-// Increment the count
-$count++;
+// Increment the visit count
+mysqli_query($conn, "UPDATE visit_count SET count = count + 1");
 
-// Write the new count back to the file
-file_put_contents($counterFile, $count);
+// Retrieve the updated count
+$result = mysqli_query($conn, "SELECT count FROM visit_count");
+$row = mysqli_fetch_assoc($result);
+$count = $row['count'];
+
+// Close connection
+mysqli_close($conn);
 
 // Output the count
 echo $count;
